@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JSON</string>
+    <string name="confirm">Confirm</string>
+    <string name="submitted">Your request has been submitted</string>
+</resources>

@@ -1,0 +1,58 @@
+{
+   "success":true,
+   "message":"",
+   "data":[
+      {
+         "id":23,
+         "description":"Radio"
+      },
+      {
+         "id":24,
+         "description":"Radio Face"
+      },
+      {
+         "id":25,
+         "description":"Gear Knob"
+      },
+      {
+         "id":26,
+         "description":"A/C Knob"
+      },
+      {
+         "id":27,
+         "description":"A/C Button"
+      },
+      {
+         "id":28,
+         "description":"Inner Roof-Light"
+      },
+      {
+         "id":29,
+         "description":"Side Mirror"
+      },
+      {
+         "id":30,
+         "description":"Inner Mirror"
+      },
+      {
+         "id":31,
+         "description":"Accidented"
+      },
+      {
+         "id":32,
+         "description":"Dented"
+      },
+      {
+         "id":33,
+         "description":"Rummaged"
+      },
+      {
+         "id":37,
+         "description":"Sensor"
+      },
+      {
+         "id":38,
+         "description":"Moving"
+      }
+   ]
+}
