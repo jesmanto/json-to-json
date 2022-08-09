@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="state_indeterminate" format="boolean" />
+
+    <!-- Checkbox 3 Style -->
+    <declare-styleable name="TriStateCheckBox">
+        <attr name="android:button" />
+        <attr name="checkbox_state" format="enum">
+            <enum name="INDETERMINATE" value="0" />
+            <enum name="CHECKED" value="1" />
+            <enum name="UNCHECKED" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>
