@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txt_pif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@android:style/TextAppearance.Material.Body1"
+        app:layout_constraintBottom_toBottomOf="@+id/group_pif"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/group_pif"
+        tools:text="Power Window Button" />
+
+    <RadioGroup
+        android:id="@+id/group_pif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".5">
+
+
+        <RadioButton
+            android:id="@+id/radio_yes_pif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="No" />
+
+        <RadioButton
+            android:id="@+id/radio_no_pif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Yes" />
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/txt_error_pif"
+        style="@android:style/TextAppearance.Material.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/colorError"
+        app:layout_constraintStart_toStartOf="@+id/txt_pif"
+        app:layout_constraintTop_toBottomOf="@+id/txt_pif"
+        tools:text="Error" />
+</androidx.constraintlayout.widget.ConstraintLayout>

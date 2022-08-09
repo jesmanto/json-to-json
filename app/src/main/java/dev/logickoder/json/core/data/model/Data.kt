@@ -1,4 +1,4 @@
-package dev.logickoder.json.data.model
+package dev.logickoder.json.core.data.model
 
 import com.google.gson.annotations.SerializedName
 import java.util.Collections.emptyList

@@ -1,33 +1,35 @@
 package dev.logickoder.json
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.tooling.preview.Preview
-import dev.logickoder.json.ui.screens.ConfirmationScreen
-import dev.logickoder.json.ui.theme.JSONTheme
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
+import dev.logickoder.json.databinding.ActivityMainBinding
+import dev.logickoder.json.utils.viewBinding
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var appBarConfiguration: AppBarConfiguration
+
+    private val binding by viewBinding(ActivityMainBinding::inflate)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            JSONTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    ConfirmationScreen()
-                }
-            }
-        }
-    }
-}
 
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    JSONTheme {
-        ConfirmationScreen()
+        setContentView(binding.root)
+
+        setSupportActionBar(binding.toolbar)
+
+        val navController = findNavController(R.id.nav_host_fragment_content_main)
+        appBarConfiguration = AppBarConfiguration(navController.graph)
+        setupActionBarWithNavController(navController, appBarConfiguration)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.nav_host_fragment_content_main)
+        return navController.navigateUp(appBarConfiguration)
+                || super.onSupportNavigateUp()
     }
 }
